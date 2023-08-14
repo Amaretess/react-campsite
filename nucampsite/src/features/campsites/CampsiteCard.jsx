@@ -4,11 +4,13 @@ import { Link } from "react-router-dom";
 
 const CampsiteCard = ({ campsite }) => {
 
-    return <Link to={`${campsite.id}`}>
+    const { id, image, name } = campsite;
+
+    return <Link to={`${id}`}>
         <Card className="card-body" >
-            <CardImg  width="100%" src={campsite.image} alt={campsite.name}/>
+            <CardImg  width="100%" src={image} alt={name}/>
             <CardImgOverlay className="card-img-overlay">
-                <CardTitle >{campsite.name}</CardTitle>
+                <CardTitle>{name}</CardTitle>
             </CardImgOverlay>
         </Card>
     
