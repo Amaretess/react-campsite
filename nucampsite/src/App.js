@@ -1,17 +1,9 @@
 import './App.css';
-import Header from "./components/Header";
-import Footer from './components/Footer';
-import CampsiteDirectoryPage from './pages/CampsiteDirectoryPage';
+import { RouterProvider } from 'react-router-dom';
+import { routesConfig } from './data/routesConfig';
 
 
-const App = () => {
-  return (
-      <div className="App">
-        <Header/>
-        <CampsiteDirectoryPage />
-        <Footer />
-      </div>
-  )
-}
+const App = () => <RouterProvider router={routesConfig}/>
+
 
 export default App;
