@@ -5,6 +5,8 @@ import ContactPage from "../pages/ContactPage"
 import RootLayout from "../layout/RootLayout"
 import CampsiteDirectoryPage from "../pages/CampsiteDirectoryPage"
 import AboutPage from "../pages/AboutPage"
+import CampsiteDetailPage from "../pages/CampsiteDetailPage"
+
 
 
 export const routesConfig = createBrowserRouter([
@@ -15,8 +17,10 @@ export const routesConfig = createBrowserRouter([
         children : [
             { index: true, element: <HomePage /> },
             { path: "/contact", element: <ContactPage /> },
-            { path: "/directory", element: <CampsiteDirectoryPage /> },
-            { path: "/about", element: <AboutPage /> },
+            { path: "directory", element: <CampsiteDirectoryPage /> },
+            { path: "about", element: <AboutPage /> },
+            { path: "directory/:campsiteId", element: <CampsiteDetailPage /> },
+
         ]
 
     }

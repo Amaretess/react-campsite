@@ -1,11 +1,12 @@
-import CampsiteDirectoryPage from "./CampsiteDirectoryPage";
-
+import { Container } from 'reactstrap';
+import DisplayList from '../features/display/DisplayList';
 
 const HomePage = () => {
-    return <>
-        HOME PAGE
-    
-    </>;
-}
+    return (
+        <Container>
+            <DisplayList />
+        </Container>
+    );
+};
 
 export default HomePage;
